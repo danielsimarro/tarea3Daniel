@@ -5,23 +5,30 @@
  */
 package daw.jcarlosvico;
 
+import java.awt.Color;
 import javax.swing.JFrame;
 
 /**
  *
  * @author jfervic933
+ *
+ *
  */
-public class VentanaPrincipal extends JFrame{
+public class VentanaPrincipalDaniel extends JFrame {
+
     
+
     // Tamaño de la ventana. Constantes
     public static final int ANCHO_FRAME = 600;
     public static final int ALTO_FRAME = 200;
-   
+
     // Atributos
     private Panel panel;
-    
+
     // Constructor de la clase 
-    public VentanaPrincipal(){
+    public VentanaPrincipalDaniel() {
+        
+        this.getContentPane().setBackground(Color.red);
         crearVentana();
         // Incializa el atributo de tipo Panel
         panel = new Panel();
@@ -29,11 +36,11 @@ public class VentanaPrincipal extends JFrame{
         this.add(panel);
         // Cuando todos los elementos están creados se hace visible la ventana
         this.setVisible(true);
+
     }
-    
-    
+
     // Método privado para inicializar el JFrame
-    private void crearVentana(){
+    private void crearVentana() {
         // Posición y tamaño del JFrame
         this.setBounds(600, 150, ANCHO_FRAME, ALTO_FRAME);
         // Título de la ventana
@@ -44,5 +51,5 @@ public class VentanaPrincipal extends JFrame{
         // Terminar el programa
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    
+
 }
